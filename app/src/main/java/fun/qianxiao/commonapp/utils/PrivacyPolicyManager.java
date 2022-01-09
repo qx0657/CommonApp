@@ -54,23 +54,28 @@ public class PrivacyPolicyManager {
         int end = start + "《隐私权政策》".length();
         style.setSpan(clickableSpan, start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-        ConfirmPopupView confirmPopupView = new XPopup.Builder(getContext()).asConfirm(
+        ConfirmPopupView confirmPopupView = new XPopup.Builder(getContext())
+                .dismissOnBackPressed(false)
+                .dismissOnTouchOutside(false)
+                .asConfirm(
                 "隐私政策",
                 style,
-                () -> { // 确认
+                // 确认
+                () -> {
                     SPUtils.getInstance().put(KEY_AGREE_Privacy_POLICY, true);
                     if (onPrivacyPolicyListener != null) {
                         onPrivacyPolicyListener.onAgree();
                     }
                 },
-                () -> { // 取消
+                // 取消
+                () -> {
                     SPUtils.getInstance().put(KEY_AGREE_Privacy_POLICY, false);
                     if (onPrivacyPolicyListener != null) {
                         onPrivacyPolicyListener.onRefuse();
                     }
                 });
         TextView contentView = confirmPopupView.getContentTextView();
-        contentView.setGravity(Gravity.LEFT);
+        contentView.setGravity(Gravity.START);
 
         confirmPopupView.setConfirmText("同意")
                 .setCancelText("拒绝")
