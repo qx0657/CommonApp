@@ -47,7 +47,7 @@ public class OpenSourceLicenseActivity extends BaseActivity<ActivityOpensourceli
                 outRect.set(0, 0, 0, ConvertUtils.dp2px(4));
             }
         });
-        binding.rvOslActivity.setAdapter(new OpenSourceLicenseAdapter(context, Arrays.asList(
+        binding.rvOslActivity.setAdapter(new OpenSourceLicenseAdapter(Arrays.asList(
                 new OpenSourceLicense("NCalendar", "yannecer", "一款安卓日历，仿miui，钉钉，华为的日历，万年历、365、周日历，月日历，月视图、周视图滑动切换，农历，节气，Andriod Calendar , MIUI Calendar,小米日历", "Apache 2.0", "https://github.com/yannecer/NCalendar"),
                 new OpenSourceLicense("Lunar", "6tail", "lunar是一款无第三方依赖的公历(阳历)、农历(阴历、老黄历)、道历、佛历工具，支持星座、儒略日、干支、生肖、节气、节日、彭祖百忌、吉神(喜神/福神/财神/阳贵神/阴贵神)方位、胎神方位、冲煞、纳音、星宿、八字、五行、十神、建除十二值星、青龙名堂等十二神、黄道日及吉凶、法定节假日及调休等。", "Apache 2.0", "https://github.com/6tail/lunar-java"),
                 new OpenSourceLicense("Android-PickerView", "Bigkoo", "这是一款仿iOS的PickerView控件，有时间选择器和选项选择器", "Apache 2.0", "https://github.com/Bigkoo/Android-PickerView"),

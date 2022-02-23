@@ -116,9 +116,8 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
             });
         }
         binding.tabLayout.setTabData(tabEntities);
-        //startActivity(AboutActivity.class);
+        //startActivity(OpenSourceLicenseActivity.class);
         //BrowserActivity.load(context, "https://www.baidu.com/");
-
         new CheckUpdateManager(context).check(true);
     }
 

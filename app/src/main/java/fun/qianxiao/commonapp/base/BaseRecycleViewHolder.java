@@ -16,6 +16,8 @@ import java.util.Objects;
 /**
  * Create by QianXiao
  * On 2021/4/6
+ *
+ * @author QianXiao
  */
 public abstract class BaseRecycleViewHolder<T extends ViewBinding> extends RecyclerView.ViewHolder {
     protected View view;

@@ -58,22 +58,22 @@ public class PrivacyPolicyManager {
                 .dismissOnBackPressed(false)
                 .dismissOnTouchOutside(false)
                 .asConfirm(
-                "隐私政策",
-                style,
-                // 确认
-                () -> {
-                    SPUtils.getInstance().put(KEY_AGREE_Privacy_POLICY, true);
-                    if (onPrivacyPolicyListener != null) {
-                        onPrivacyPolicyListener.onAgree();
-                    }
-                },
-                // 取消
-                () -> {
-                    SPUtils.getInstance().put(KEY_AGREE_Privacy_POLICY, false);
-                    if (onPrivacyPolicyListener != null) {
-                        onPrivacyPolicyListener.onRefuse();
-                    }
-                });
+                        "隐私政策",
+                        style,
+                        // 确认
+                        () -> {
+                            SPUtils.getInstance().put(KEY_AGREE_Privacy_POLICY, true);
+                            if (onPrivacyPolicyListener != null) {
+                                onPrivacyPolicyListener.onAgree();
+                            }
+                        },
+                        // 取消
+                        () -> {
+                            SPUtils.getInstance().put(KEY_AGREE_Privacy_POLICY, false);
+                            if (onPrivacyPolicyListener != null) {
+                                onPrivacyPolicyListener.onRefuse();
+                            }
+                        });
         TextView contentView = confirmPopupView.getContentTextView();
         contentView.setGravity(Gravity.START);
 
